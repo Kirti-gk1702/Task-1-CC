@@ -1,0 +1,178 @@
+<html>
+<head>
+<title>practice 1</title>
+<style>
+.card{
+border-radius:25px;
+display:inline-block;
+box-shadow: 0 4px 8px 0 rgb(255,255,255,.2);
+background:grey;
+transition: .3s;
+width:280;
+padding:10px;
+margin-left:10px;
+margin-right:10px;
+margin-bottom:10px;
+}
+ 
+.button
+{
+background-color:#f5f5f5;
+color:#000000;
+text-align:center;
+font-size:20px;
+cursor:pointer;
+
+}
+.button:hover{
+box-shadow:0 20px 20px 0 rgb(255,255,255,0.5); 
+background-color:black;
+color:white;
+}
+.card:hover{
+box-shadow:0px 6px 10px 0 rgb(255,255,255,.5); 
+}
+img
+{
+align:center;
+width:200px;
+height:200px;
+}
+.container{
+padding: 2px 16px;
+align:center;
+
+}
+</style>
+</head>
+<body bgcolor="black" >
+
+<div class="card" >
+<div id="card1" class="container">
+<img src=""  />
+<h1></h1>
+<h3></h3>
+<p></p>
+<button class="button" value="Click to view less" onclick="myfunction1(1)">Click to know more</button>
+</div>
+</div>
+
+<div class="card">
+<div id="card2" class="container">
+<img src="" />
+<h1></h1>
+<h3></h3>
+<p></p>
+<button class="button" value="Click to view less" onclick="myfunction1(2)">Click to know more</button>
+</div>
+</div>
+
+<div class="card">
+<div id="card3" class="container">
+<img src=""  />
+<h1></h1>
+<h3></h3>
+<p></p>
+<button class="button" value="Click to view less" onclick="myfunction1(3)">Click to know more</button>
+</div>
+</div>
+
+<div class="card">
+<div id="card4" class="container">
+<img src=""  />
+<h1></h1>
+<h3></h3>
+<p></p>
+<button class="button" value="Click to view less" onclick="myfunction1(4)">Click to know more</button>
+</div>
+</div>
+
+<script>
+var arr=[
+        ["CS.jfif","Kirti Kumari","Computer Engineering","She is a CS student from 1st year. Currently doing internship with College Canteen"],
+        ["electrical.jfif","Kanak Gupta","Electrical Engineering","She is a Electrical Engineering student from 1st year. Currently doing internship with College Canteen"],
+        ["mechanical.jfif","Aham Gupta","Mechanical Engineering","He is a Mechanical Engineering student from 1st year. Currently doing internship with College Canteen"],
+        ["chemical.jfif","Sneha Chauhan","Chemical Engineering","She is a Chemical Engineering student from 1st year. Currently doing internship with College Canteen"],
+];
+var card1=document.getElementById('card1').children;
+var card2=document.getElementById('card2').children;
+var card3=document.getElementById('card3').children;
+var card4=document.getElementById('card4').children;
+var card=[card1,card2,card3,card4];
+for(var i=0;i<=3;i++)
+{
+card[i][0].src=arr[i][0];
+card[i][1].innerHTML=arr[i][1];
+card[i][2].innerHTML=arr[i][2];
+}
+function myfunction1(a)
+{
+cardnum=parseInt(a);
+switch(cardnum)
+{
+case 1: 
+if(card[0][4].value=="Click to know more")
+{
+card[0][3].innerHTML=arr[0][3];
+card[0][4].innerHTML="Click to view less";
+card[0][4].value="Click to view less";
+}
+else
+{
+card[0][3].innerHTML="";
+card[0][4].innerHTML="Click to know more";
+card[0][4].value="Click to know more";
+}
+break;
+
+case 2: 
+if(card[1][4].value=="Click to know more")
+{
+card[1][3].innerHTML=arr[1][3];
+card[1][4].innerHTML="Click to view less";
+card[1][4].value="Click to view less";
+}
+else
+{
+card[1][3].innerHTML="";
+card[1][4].innerHTML="Click to know more";
+card[1][4].value="Click to know more";
+}
+break;
+
+case 3: 
+if(card[2][4].value=="Click to know more")
+{
+card[2][3].innerHTML=arr[2][3];
+card[2][4].innerHTML="Click to view less";
+card[2][4].value="Click to view less";
+}
+else
+{
+card[2][3].innerHTML="";
+card[2][4].innerHTML="Click to know more";
+card[2][4].value="Click to know more";
+}
+break;
+
+case 4: 
+if(card[3][4].value=="Click to know more")
+{
+card[3][3].innerHTML=arr[3][3];
+card[3][4].innerHTML="Click to view less";
+card[3][4].value="Click to view less";
+}
+else
+{
+card[3][3].innerHTML="";
+card[3][4].innerHTML="Click to know more";
+card[3][4].value="Click to know more";
+}
+break;
+
+}
+
+}
+</script>
+</body>
+</html>
